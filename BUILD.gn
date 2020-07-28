@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-import("//build/lite/config/component/zlite_component.gni")
+import("//build/lite/config/component/lite_component.gni")
 
 config("libsec_config") {
     include_dirs = [
@@ -63,13 +63,13 @@ libsec_sources = [
         "//third_party/bounds_checking_function/src/vsprintf_s.c",
     ]
 
-zlite_library("libsec_static") {
+lite_library("libsec_static") {
     target_type = "static_library"
     sources = libsec_sources
     public_configs = [ ":libsec_config" ]
 }
 
-zlite_library("libsec_shared") {
+lite_library("libsec_shared") {
     target_type = "shared_library"
     sources = libsec_sources
     public_configs = [ ":libsec_config" ]
