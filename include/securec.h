@@ -106,13 +106,6 @@ typedef int errno_t;
 #ifdef __cplusplus
 extern "C" {
 #endif
-    /*
-     * Description: The GetHwSecureCVersion function get SecureC Version string and version number.
-     * Parameter: verNumber - to store version number (for example value is 0x500 | 0xa)
-     * Return:   version string
-     */
-    SECUREC_API const char *GetHwSecureCVersion(unsigned short *verNumber);
-
 #if SECUREC_ENABLE_MEMSET
     /*
      * Description: The memset_s function copies the value of c (converted to an unsigned char) into each of
