@@ -71,10 +71,6 @@ if (defined(ohos_lite)) {
     sources = libsec_sources
     public_configs = [ ":libsec_public_config" ]
   }
-  static_library("libsec_kernel") {
-    sources = libsec_sources
-    public_configs = [ ":libsec_public_config" ]
-  }
   lite_library("libsec_shared") {
     target_type = "shared_library"
     sources = libsec_sources
