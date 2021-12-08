@@ -28,7 +28,11 @@ config("libsec_public_config") {
 if (defined(ohos_lite)) {
   lite_library("libsec_static") {
     target_type = "static_library"
-    sources = libsec_sources
+
+    # When the kernel is liteos_m, use //kernel/liteos_m/kal/libsec/BUILD.gn to compile.
+    if (ohos_kernel_type != "liteos_m") {
+      sources = libsec_sources
+    }
     public_configs = [ ":libsec_public_config" ]
   }
   lite_library("libsec_shared") {
