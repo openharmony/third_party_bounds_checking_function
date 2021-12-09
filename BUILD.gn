@@ -32,6 +32,8 @@ if (defined(ohos_lite)) {
     # When the kernel is liteos_m, use //kernel/liteos_m/kal/libsec/BUILD.gn to compile.
     if (ohos_kernel_type != "liteos_m") {
       sources = libsec_sources
+    } else {
+      sources = []
     }
     public_configs = [ ":libsec_public_config" ]
   }
