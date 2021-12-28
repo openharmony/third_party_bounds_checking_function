@@ -76,5 +76,6 @@ if (defined(ohos_lite)) {
       "-D_INC_STDLIB_S",
       "-D_INC_MEMORY_S",
     ]
+    part_name = "utils_base"
   }
 }
