@@ -80,6 +80,6 @@ if (defined(ohos_lite)) {
     install_images = [
       "system",
       "updater",  
-    ]	
+    ]
   }
 }
