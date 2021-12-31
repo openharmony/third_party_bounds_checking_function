@@ -79,7 +79,7 @@ if (defined(ohos_lite)) {
     part_name = "utils_base"
     install_images = [
       "system",
-      "updater",  
+      "updater",
     ]
   }
 }
