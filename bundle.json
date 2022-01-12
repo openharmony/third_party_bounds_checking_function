@@ -19,8 +19,8 @@
         "checking",
         "function"
     ],
-    "envs": [],
-    "dirs": [],
+    "envs": {},
+    "dirs": {},
     "segment": {
         "destPath": "third_party/bounds_checking_function"
     },
