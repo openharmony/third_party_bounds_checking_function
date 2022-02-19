@@ -11,7 +11,7 @@
     "scripts": {},
     "component": {
         "name": "thirdparty_bounds_checking_function",
-        "subsystem": "",
+        "subsystem": "securec",
         "syscap": [],
         "features": [],
         "adapted_system_type": [],
@@ -22,7 +22,7 @@
             "third_party": []
         },
         "build": {
-            "sub_component": [],
+            "sub_component": [ "//third_party/bounds_checking_function:libsec_shared" ],
             "inner_kits": [],
             "test": []
         }
