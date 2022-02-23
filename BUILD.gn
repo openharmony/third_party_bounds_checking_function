@@ -67,6 +67,7 @@ if (defined(ohos_lite)) {
   ohos_shared_library("libsec_shared") {
     sources = libsec_sources
     public_configs = [ ":libsec_public_config" ]
+    subsystem_name = "securec"
     cflags = [
       "-D_INC_STRING_S",
       "-D_INC_WCHAR_S",
@@ -76,7 +77,7 @@ if (defined(ohos_lite)) {
       "-D_INC_STDLIB_S",
       "-D_INC_MEMORY_S",
     ]
-    part_name = "utils_base"
+    part_name = "thirdparty_bounds_checking_function"
     install_images = [
       "system",
       "updater",
