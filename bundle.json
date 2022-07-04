@@ -10,11 +10,11 @@
     "dirs": {},
     "scripts": {},
     "component": {
-        "name": "thirdparty_bounds_checking_function",
-        "subsystem": "securec",
+        "name": "bounds_checking_function",
+        "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
-        "adapted_system_type": [],
+        "adapted_system_type": [ "mini", "small", "standard" ],
         "rom": "",
         "ram": "",
         "deps": {
