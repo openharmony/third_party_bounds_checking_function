@@ -46,7 +46,7 @@ if (defined(ohos_lite)) {
 } else {
   ohos_static_library("libsec_static") {
     sources = libsec_sources
-    public_configs = [ ":libsec_public_config" ]
+    all_dependent_configs = [ ":libsec_public_config" ]
     cflags = [
       "-D_INC_STRING_S",
       "-D_INC_WCHAR_S",
@@ -61,7 +61,7 @@ if (defined(ohos_lite)) {
   }
   ohos_shared_library("libsec_shared") {
     sources = libsec_sources
-    public_configs = [ ":libsec_public_config" ]
+    all_dependent_configs = [ ":libsec_public_config" ]
     cflags = [
       "-D_INC_STRING_S",
       "-D_INC_WCHAR_S",
