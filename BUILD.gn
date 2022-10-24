@@ -25,14 +25,15 @@ config("libsec_public_config") {
 
 if (defined(ohos_lite)) {
   # When the kernel is liteos_m, use //kernel/liteos_m/kal/libsec/BUILD.gn to compile.
-  if (ohos_kernel_type == "liteos_m") {
-    group("libsec_static") {
-    }
-  } else {
+  if (current_toolchain == "//build/toolchain/linux:clang_x64" ||
+      ohos_kernel_type == "liteos_a" || ohos_kernel_type == "linux") {
     lite_library("libsec_static") {
       target_type = "static_library"
       sources = libsec_sources
       public_configs = [ ":libsec_public_config" ]
+    }
+  } else if (ohos_kernel_type == "liteos_m") {
+    group("libsec_static") {
     }
   }
   lite_library("libsec_shared") {
