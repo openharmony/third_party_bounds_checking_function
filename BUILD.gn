@@ -72,6 +72,10 @@ if (defined(ohos_lite)) {
       "-D_INC_STDLIB_S",
       "-D_INC_MEMORY_S",
     ]
+    innerapi_tags = [
+      "chipsetsdk",
+      "platformsdk",
+    ]
     part_name = "bounds_checking_function"
     subsystem_name = "thirdparty"
     install_images = [
