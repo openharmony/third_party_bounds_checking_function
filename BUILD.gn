@@ -75,6 +75,7 @@ if (defined(ohos_lite)) {
     innerapi_tags = [
       "chipsetsdk",
       "platformsdk",
+      "sasdk",
     ]
     part_name = "bounds_checking_function"
     subsystem_name = "thirdparty"
