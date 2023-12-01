@@ -46,22 +46,14 @@ int vscanf_s(const char *format, va_list argList)
      * To determine it's invalid. If you has fixed platform, you can check some fields to validate it,
      * such as "argList == NULL" or argList.xxx != NULL or *(size_t *)&argList != 0.
      */
-#if SECUREC_ENABLE_SCANF_FILE
     if (format == NULL || fStr.pf == NULL) {
-#else
-    if (format == NULL) {
-#endif
         SECUREC_ERROR_INVALID_PARAMTER("vscanf_s");
         return SECUREC_SCANF_EINVAL;
     }
 
-#if SECUREC_ENABLE_SCANF_FILE
     SECUREC_LOCK_STDIN(0, fStr.pf);
-#endif
     retVal = SecInputS(&fStr, format, argList);
-#if SECUREC_ENABLE_SCANF_FILE
     SECUREC_UNLOCK_STDIN(0, fStr.pf);
-#endif
     if (retVal < 0) {
         SECUREC_ERROR_INVALID_PARAMTER("vscanf_s");
         return SECUREC_SCANF_EINVAL;
