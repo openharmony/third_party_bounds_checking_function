@@ -27,6 +27,8 @@
 #include <wchar.h>
 #endif
 
+/* fix redefined */
+#undef SECUREC_ENABLE_WCHAR_FUNC
 /* Disable wchar func to clear vs warning */
 #define SECUREC_ENABLE_WCHAR_FUNC   0
 #define SECUREC_FORMAT_OUTPUT_INPUT 1
