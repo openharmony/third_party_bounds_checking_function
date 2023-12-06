@@ -85,9 +85,17 @@ typedef int errno_t;
 /* If you need export the function of this library in Win32 dll, use __declspec(dllexport) */
 #ifndef SECUREC_API
 #if defined(SECUREC_DLL_EXPORT)
+#if defined(_MSC_VER)
 #define SECUREC_API __declspec(dllexport)
+#else /* build for linux */
+#define SECUREC_API __attribute__((visibility("default")))
+#endif /* end of _MSC_VER and SECUREC_DLL_EXPORT */
 #elif defined(SECUREC_DLL_IMPORT)
+#if defined(_MSC_VER)
 #define SECUREC_API __declspec(dllimport)
+#else
+#define SECUREC_API
+#endif /* end of _MSC_VER and SECUREC_DLL_IMPORT */
 #else
 /*
  * Standardized function declaration. If a security function is declared in the your code,
@@ -106,6 +114,13 @@ typedef int errno_t;
 #ifdef __cplusplus
 extern "C" {
 #endif
+/*
+ * Description: The GetHwSecureCVersion function get SecureC Version string and version number.
+ * Parameter: verNumber - to store version number (for example value is 0x500 | 0xa)
+ * Return:   version string
+ */
+SECUREC_API const char *GetHwSecureCVersion(unsigned short *verNumber);
+
 #if SECUREC_ENABLE_MEMSET
 /*
  * Description: The memset_s function copies the value of c (converted to an unsigned char) into each of
