@@ -14,7 +14,11 @@
         "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
-        "adapted_system_type": [ "mini", "small", "standard" ],
+        "adapted_system_type": [
+            "mini",
+            "small",
+            "standard"
+        ],
         "rom": "",
         "ram": "",
         "deps": {
@@ -22,14 +26,16 @@
             "third_party": []
         },
         "build": {
-            "sub_component": [ "//third_party/bounds_checking_function:libsec_shared" ],
+            "sub_component": [
+                "//third_party/bounds_checking_function:libsec_shared"
+            ],
             "inner_kits": [
                 {
                     "name": "//third_party/bounds_checking_function:libsec_shared",
                     "header": {
-                    "header_files": [
-                        "securec.h",
-                        "securectype.h"
+                        "header_files": [
+                            "securec.h",
+                            "securectype.h"
                         ],
                         "header_base": "//third_party/bounds_checking_function/include"
                     }
@@ -37,9 +43,9 @@
                 {
                     "name": "//third_party/bounds_checking_function:libsec_static",
                     "header": {
-                    "header_files": [
-                        "securec.h",
-                        "securectype.h"
+                        "header_files": [
+                            "securec.h",
+                            "securectype.h"
                         ],
                         "header_base": "//third_party/bounds_checking_function/include"
                     }
