@@ -1,6 +1,6 @@
 [
     {
-        "Name"                  : "bounds_checking_function",
+        "Name"                  : "openEuler:libboundscheck",
         "License"               : "Mulan Permissive Software License，Version 2",
         "License File"          : "LICENSE",
         "Version Number"        : "v1.1.16",
