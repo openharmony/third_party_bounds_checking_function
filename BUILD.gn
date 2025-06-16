@@ -77,7 +77,7 @@ if (defined(ohos_lite)) {
       "-D_INC_MEMORY_S",
     ]
     innerapi_tags = [
-      "chipsetsdk",
+      "chipsetsdk_sp",
       "platformsdk",
       "sasdk",
     ]
